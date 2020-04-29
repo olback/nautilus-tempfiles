@@ -1,0 +1,28 @@
+[package]
+name = "tempfiles-nautilus"
+version = "0.1.0"
+authors = ["Edwin Svensson <tempfiles-nautilus@olback.net>"]
+edition = "2018"
+
+[lib]
+crate-type = [ "dylib" ]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# nautilus-extension = "0.4.0"
+nautilus-extension = { path = "/home/olback/Desktop/nautilus-extension-rs/nautilus-extension" }
+gobject-sys = "0.9"
+glib-sys = "0.9"
+gtk-sys = "0.9"
+notify-rust = "3.6.3"
+libc = "0.2"
+tokio = { version = "0.2", features = [ "rt-core", "rt-threaded" , "macros" ] }
+lazy_static = "1.4"
+reqwest = { version = "0.10", features = [ "json" ] }
+mime_guess = "2.0"
+serde = { version = "1.0", features = [ "derive" ] }
+clipboard = "0.5.0"
+percent-encoding = "2.1"
+dirs = "2.0"
+toml = "0.5"
